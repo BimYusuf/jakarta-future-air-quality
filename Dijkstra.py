@@ -227,23 +227,4 @@ def inputMachinery(lokasi, date, month, year):
        
 
 
-# tmp = (inputMachinery(1, 1, 1, 2029), 
-# inputMachinery(2, 1, 1, 2029), 
-# inputMachinery(3, 1, 1, 2029), 
-# inputMachinery(4, 1, 1, 2029), 
-# inputMachinery(5, 1, 1, 2029))
-
-ttgl = 1
-bln = 5
-
-all = {}
-for i in range(2025, 2029):
-    tmp = (inputMachinery(1, ttgl, bln, i), 
-    inputMachinery(2, ttgl, bln, i), 
-    inputMachinery(3, ttgl, bln, i), 
-    inputMachinery(4, ttgl, bln, i), 
-    inputMachinery(5, ttgl, bln, i))
-    all[i] = tmp 
-
-print(all)
 
