@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto+Serif:opsz@8..144&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    overflow-x: hidden;
+    position: relative;
+}
+
+#welcome1{
+    background-image: url("../pexels-tom-fisk-2116719.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: 1.3s;
+    opacity: 0;
+}
+ 
+.section{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+#header{
+    width: 100vw;
+    height: 6em;
+    background-color: #7c6e41a9;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+
+.content-1{
+    color: white;
+    width: 100vw;
+    background-color: #7c6e41a9;
+    font-family: 'Roboto Serif', serif;
+    box-shadow: -0.6rem -1rem 12px #494021a9;
+}
+
+
+.content-1 h6{
+    max-width: 60%;
+}
+
+.wide-screen{
+    max-width: 100vw;
+}
+
+#definition{
+    border: none;
+    width: 100vw;
+    height: 75vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+#definition-bg{
+    background-color: #103356;
+    opacity: 0.5;
+    background: linear-gradient(135deg, #01091155 25%, transparent 25%) -14px 0/ 28px 28px, linear-gradient(225deg, #010911 25%, transparent 25%) -14px 0/ 28px 28px, linear-gradient(315deg, #01091155 25%, transparent 25%) 0px 0/ 28px 28px, linear-gradient(45deg, #010911 25%, #103356 25%) 0px 0/ 28px 28px;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+#box-definition{
+    background-color: #7c6e41a9;
+    font-family: 'Roboto Serif', serif;
+    box-shadow: -0.6rem -1rem 12px #494021a9;
+    position: absolute;
+    color: white;
+}
+
+#future{
+    background-color: #1745749a;
+    padding: 3rem;
+    /* color: rgb(237, 46, 12); */
+}
+
+#future .chart-wrap{
+    width: 100%;
+    height: 100%;
+    background-color: #f0efef;
+}
+
+#started{
+    background-color: #1745749a;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+#box-started{
+    width: 70vw;
+    height: 60%;
+    background-color: #7c6e41a9;
+    font-family: 'Roboto Serif', serif;
+    box-shadow: -0.6rem -1rem 12px #494021a9;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#started object{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: 1.2s;
+}
+
+#started object:nth-child(3){
+    opacity: 0;
+}
+
+#started button{
+    border: 2px solid #ffd900;
+    padding: 1rem;
+    color: #ffd900;
+    transition: 0.8s ease-out;
+}
+
+#started button:hover{
+    background-color: #ffd900 ;
+    color: white;
+}
+
+#footer{
+    width: 100vw;
+    padding: 1rem;
+    color: whitesmoke;
+    background-color: #010911;
+    margin-top: auto;
+}
+
+
+.slideLeft{
+    position: absolute;
+    transition: 2s;
+    transform: translateX(-100vw);
+    opacity: 0;
+}
+
+
+.slideRight{
+    position: absolute;
+    transition: 2s;
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+/* predict */
+
+#formPredict{
+    background-color: #1745749a;
+}
+
+#formPredict h3{
+    color: #e6e6e6;
+}
+
+#formPredict form{
+    padding: 5rem ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #e6e6e6;
+}
+
+#formPredict #date{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#formPredict #date div > :nth-child(2){
+    padding: 1rem;
+    font-size: x-large;
+    background-color: #a0a0a0 ;
+    color: #e6e6e6;
+}
+
+#formPredict #date input:focus{
+    outline: none;
+}
+
+#formPredict #date input:focus ~ span{
+    width: 100%;
+}
+#formPredict #date select:focus ~ span{
+    width: 100%;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+#date div span{
+    width: 0;
+    height: 4px;
+    transition: 1s ease-in-out;
+    background-color: #ffd900;
+}
+
+#formPredict select[name="lokasi"]{
+    color: #e6e6e6;
+    background-color: #a0a0a0 ;
+}
+
+#formPredict button[type="submit"]{
+    border: 2px solid #ffd900;
+    color: #ffd900;
+    width: 7rem;
+    align-self: center;
+    font-weight: bold;
+    padding: 1rem;
+    white-space:nowrap ;
+}
+
+#formPredict button[type="submit"]:hover{
+    background-color: #ffd900;
+    color: white;
+}
+
+#formPredict button[type="submit"]:active{
+    background-color: #f3f3f3;
+    color: #fbff00;
+}
+
+#result{
+    background-color: #488bcfd7;
+    position: relative;
+    padding: 6em;
+}
+
+#result #overlay{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(116, 165, 221);
+    display: grid;
+    place-items: center;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+#result{
+    background-color: rgb(95, 143, 197);
+    width: 100%;
+    border-radius: 3px;
+    display: flex;
+}
+
+#chart-figure{
+    background-color: #f0efef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#result .chart-wrap{
+    width: 6rem;
+    height: 100%;
+    transform: scale(0.8);
+}
+
+ canvas{
+    width: 7rem;
+    height: 100%;
+}
+
+#result-desc{
+    width: 35%;
+    height: 100;
+    background-color: rgb(101, 141, 187);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 12px;
+    color: whitesmoke;
+}
+
+#result-desc #level-flag{
+    width: fit-content;
+    height: fit-content;
+    padding: 12px;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.637);
+    margin: 8px;
+}

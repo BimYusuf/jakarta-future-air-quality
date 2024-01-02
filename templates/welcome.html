@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakarta Future Air Quality |  Welcome</title>
+    <link rel="stylesheet" href="static/css/welcome.css">
+    <link rel="stylesheet" href="static/css/skeleton.css">
+    <link rel="stylesheet" href="static/css/selector.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1f4cf83a4.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div id="skeleton">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div id="overlay">
+            <div id="loader1" class="loader"></div>
+        </div>
+    </div>
+
+    <div id="welcome1" class="page1">
+        <div id="header">
+            <h3 class="m-5">Model Version 1.0.0</h3>
+        </div>
+        <div class="content-1 m-24 p-20">
+            <h1 class="text-6xl ">Jakarta Future Air Quality</h1>
+            <h6 class="text-xl m-2">an Immersive Machine Learning Model to predict the Future of Air Quality in Jakarta, Indonesia</h3>
+        </div>
+    </div> 
+
+
+    <div class="section page1" id="definition">
+        <div id="definition-bg"></div>
+        <div class="my-40 p-20 w-9/12" id="box-definition">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aperiam, facilis doloribus id enim</h1>
+        </div>
+    </div>
+
+    <div class="section page1" id="future">
+        <div class="chart-wrap">
+            <canvas id="future-chart"></canvas>
+        </div>
+    </div>
+
+    <div class="section page1" id="started">
+        <div class="p-20" id="box-started">
+            <h1 class="text-3xl">LET'S GET STARTED</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cumque dignissimos excepturi, asperiores exercitationem culpa eveniet explicabo. Consectetur at quo, enim quidem sed vero impedit totam asperiores qui quos officia.</p>
+            <button onclick="openStatistic()">Started</button>
+        </div>
+        <object data="static/polluted.svg" type=""></object>
+        <object data="static/cleared.svg" type=""></object>
+    </div>
+
+
+    <div class="page2 section p-20" id="formPredict">
+        <h3>
+            Here you input information to predict Jakarta air quality. Enter the date and location for which you want to predict air quality. make sure you predict future dates
+        </h3>
+        <form action="/app/machinery" method="post" enctype="multipart/form-data">
+            <div id="date">
+                <div class="input">
+                    <Label>Day :</Label>
+                    <input required type="text" name="tanggal" id="" >
+                    <span></span>
+                </div>
+                <div class="input">
+                    <label for="">Month :</label>
+                    <select required name="bulan">
+                        <option selected ></option>
+                        <option value="1">Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Maret</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                        <option value="6">Juni</option>
+                        <option value="7">Juli</option>
+                        <option value="8">Agustus</option>
+                        <option value="9">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Desember</option>
+                    </select>
+                    <span></span>
+                </div>
+                <div class="input">
+                    <label for="">Year : </label>
+                    <input required type="text" name="tahun" >
+                    <span></span>
+                </div>
+            </div>
+            <div class="input">
+                <label for="">Data Collecting Location : </label>
+                <select required name="lokasi">
+                    <option selected ></option>
+                    <option value="1">Bundaran HI</option>
+                    <option value="2">Kelapa Gading</option>
+                    <option value="3">Jaga Karsa</option>
+                    <option value="4">Lubang Buaya</option>
+                    <option value="5">Kebon Jeruk</option>
+                </select>
+            </div>
+            <button type="submit"><i class="fa-solid fa-wand-sparkles"></i>Predict!</button>
+        </form>
+    </div>
+
+    <div class="section page3" id="result">
+        <div id="overlay">
+            <div class="loader" id="loader2"></div>
+        </div>
+        <div id="chart-figure">
+            <div class="chart-wrap">
+                <canvas id="pm10-chart"></canvas>
+            </div>
+            <div class="chart-wrap">
+                <canvas id="so2-chart"></canvas>
+            </div>
+            <div class="chart-wrap">
+                <canvas id="co-chart"></canvas>
+            </div>
+            <div class="chart-wrap">
+                <canvas id="o3-chart"></canvas>
+            </div>
+            <div class="chart-wrap">
+                <canvas id="no2-chart"></canvas>
+            </div>
+            <div class="chart-wrap">
+                <canvas id="pm25-chart"></canvas>
+            </div>
+        </div>
+        <div id="result-desc">
+            <h1 class="text-xl">Hasil Prediksi</h1>
+            <p>Hasil prediksi kualitas udara Jakarta pada tanggal <span id="date"></span> berdasarkan dataset yang ada menyatakan bahwa kualitas udara Jakarta berada pada level :</p>
+            <div id="level-flag">
+                <h1 class="text-3xl"></h1>
+            </div>
+            <p>Dengan presentasi prediksi <span id="prediksi"></span></p>
+        </div>
+        
+        
+    </div>
+
+    <div id="footer">
+        <h6>Copyright© 2024 Djikstra Team Departemen of Computer Science Padjadjaran University </h6>
+    </div>
+
+    <script type="text/javascript" src="static/js/welcome.js"></script>
+    <script type="text/javascript" src="static/js/turn-page.js"></script>
+    <script type="text/javascript" src="static/js/request-control.js"></script>
+    <script type="text/javascript" src="static/js/chart-control.js"></script>
+    <script type="text/javascript" src="static/js/future-chart.js"></script>
+</body>
+</html>
