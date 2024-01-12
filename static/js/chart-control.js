@@ -117,3 +117,7 @@
 
     }
 
+    function showRecomendation(){
+        $('#recomendation > *').show()
+    }
+

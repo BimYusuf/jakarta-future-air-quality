@@ -41,6 +41,8 @@ body{
 .content-1{
     color: white;
     width: 100vw;
+    padding: 5rem;
+    margin: 6rem;
     background-color: #7c6e41a9;
     font-family: 'Roboto Serif', serif;
     box-shadow: -0.6rem -1rem 12px #494021a9;
@@ -85,9 +87,13 @@ body{
 
 #future{
     background-color: #1745749a;
-    padding: 3rem;
+    padding: 10rem;
+    height: 110vh;
+    color: #f0efef;
+    font-family: 'Roboto Serif', serif;
     /* color: rgb(237, 46, 12); */
 }
+
 
 #future .chart-wrap{
     width: 100%;
@@ -214,6 +220,11 @@ body{
     width: fit-content;
 }
 
+#err-message{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+
 #date div span{
     width: 0;
     height: 4px;
@@ -311,4 +322,93 @@ body{
     color: white;
     box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.637);
     margin: 8px;
+}
+
+#recomendation{
+    background-color: rgb(95, 143, 197);
+    padding: 4rem;
+    color: #f0efef;
+}
+
+#recomendation h1{
+    font-family: 'Roboto Serif', serif;
+}
+
+#recomendation ol{
+    padding-right: 12rem;
+}
+#recomendation li {
+    display: list-item;
+    list-style-position: outside;
+    margin-left: 1.5rem;
+  }
+
+
+@media (max-width : 600px) {
+    .content-1 {
+        padding: 1rem;
+        margin: 6rem 2rem;
+    }
+
+    .content-1 h1{
+        font-size :2.25rem;
+        margin-bottom: 4rem;
+        margin-top: 1.6rem;
+    }
+
+    #future {
+        padding: 3rem;
+        height: 130vh;
+        padding-bottom: 20rem;
+    }
+
+    #started{
+        padding: 1rem;
+    }
+
+    #box-started{
+        width: 90vw;
+        height: 80%;
+    }
+
+    #formPredict{
+        padding: 2rem;
+    }
+
+    #formPredict form{
+        padding: 0;
+        margin-top: 2rem;
+        height: 70vh;
+    }
+
+    #formPredict #date div > :nth-child(2){
+        width: 6rem;
+    }
+    
+
+    #result{
+        flex-direction: column;
+        padding: 1rem;
+        overflow-y: scroll;
+    }
+    
+    #chart-figure{
+        height: 80vh;
+        width: fit-content;
+        border-top-right-radius: 10px ;
+        border-bottom-right-radius: 10px;
+    }
+
+    #result-desc{
+        width: 100%;
+    }
+
+    #recomendation{
+        padding: 1rem;
+        height: fit-content;
+    }
+
+    #recomendation ol{
+        padding: 0;
+    }
 }

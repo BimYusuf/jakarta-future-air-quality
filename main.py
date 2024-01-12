@@ -1,7 +1,10 @@
+#  1.0.0.0
+
 from flask import Flask
 from flask import *
 from flask import request
 from markupsafe import escape
+import os
 import Dijkstra 
 
 app = Flask(__name__)
@@ -25,4 +28,4 @@ def machinery():
 
 
 
-app.run()
+app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))

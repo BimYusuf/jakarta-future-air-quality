@@ -1,5 +1,6 @@
 let out;
 let charts = [];
+$('#recomendation > *').hide()
         $("#formPredict form").submit(function(e){
             e.preventDefault()
 
@@ -38,6 +39,7 @@ let charts = [];
                     charts[4] = showChart(partikulat['no2'], 'no2', 600)
                     charts[5] = showChart(partikulat['pm25'], 'pm25', 300)
                     showResultDesc(response)
+                    showRecomendation()
                 },
                 error: function(response){
                     console.error(response)

@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jakarta Future Air Quality |  Welcome</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="static/css/welcome.css">
     <link rel="stylesheet" href="static/css/skeleton.css">
     <link rel="stylesheet" href="static/css/selector.css">
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a1f4cf83a4.js" crossorigin="anonymous"></script>
     <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -33,9 +33,9 @@
         <div id="header">
             <h3 class="m-5">Model Version 1.0.0</h3>
         </div>
-        <div class="content-1 m-24 p-20">
+        <div class="content-1 ">
             <h1 class="text-6xl ">Jakarta Future Air Quality</h1>
-            <h6 class="text-xl m-2">an Immersive Machine Learning Model to predict the Future of Air Quality in Jakarta, Indonesia</h3>
+            <h6 class="text-xl m-2">a cutting-edge Machine Learning Model to predict as precise as possible the Future of Air Quality in Jakarta, Indonesia</h3>
         </div>
     </div> 
 
@@ -48,9 +48,15 @@
     </div>
 
     <div class="section page1" id="future">
+        <h1 class="text-3xl">
+            Overview of Jakarta's Air Quality prediction in the future (2005&nbsp-&nbsp2029)&nbsp(COMING SOON)            
+        </h1>
+        <br>
         <div class="chart-wrap">
             <canvas id="future-chart"></canvas>
         </div>
+        <br>
+        <h6>*This prediction can be better or worst depends on newly data</h6>
     </div>
 
     <div class="section page1" id="started">
@@ -68,7 +74,7 @@
         <h3>
             Here you input information to predict Jakarta air quality. Enter the date and location for which you want to predict air quality. make sure you predict future dates
         </h3>
-        <form action="/app/machinery" method="post" enctype="multipart/form-data">
+        <form>
             <div id="date">
                 <div class="input">
                     <Label>Day :</Label>
@@ -99,6 +105,7 @@
                     <input required type="text" name="tahun" >
                     <span></span>
                 </div>
+            
             </div>
             <div class="input">
                 <label for="">Data Collecting Location : </label>
@@ -111,7 +118,13 @@
                     <option value="5">Kebon Jeruk</option>
                 </select>
             </div>
+            <div id="err-message">
+                <h1>
+                    
+                </h1>
+            </div>
             <button type="submit"><i class="fa-solid fa-wand-sparkles"></i>Predict!</button>
+            
         </form>
     </div>
 
@@ -147,8 +160,24 @@
             </div>
             <p>Dengan presentasi prediksi <span id="prediksi"></span></p>
         </div>
-        
-        
+    </div>
+    <div  class="section page3" id="recomendation">
+        <h1 class="text-4xl">Our recomendation to Goverment and Researcher</h1>
+        <br>
+        <ol type="1" class="list-decimal list-inside">
+            <li>Increase green spaces and urban tree coverage to absorb pollutants. Implementing biodiversity, ecosystem services, tree selection around urban area and gather the Community Engagement</li>
+            <br>
+            <li>Implement zoning regulations to prevent the construction of industrial facilities near residential areas.</li>
+            <br>
+            <li>Promote the use of renewable energy sources to reduce dependence on fossil fuels.</li>
+            <br>
+            <li>Regularly review and update air quality management plans based on the latest scientific findings and technological advancements.</li>
+            <br>
+            <li>Implement zoning regulations to prevent the construction of industrial facilities near residential areas.</li>
+            <br>
+            <li>
+                Implementing emission controls and technological upgrades for industries and power plants involves adopting measures and technologies to reduce the release of pollutants into the air. Implementing technology such as Electrostatic Precipitators (ESPs) to remove particulate matter from industrial flue gases</li>
+        </ol> 
     </div>
 
     <div id="footer">
@@ -159,6 +188,8 @@
     <script type="text/javascript" src="static/js/turn-page.js"></script>
     <script type="text/javascript" src="static/js/request-control.js"></script>
     <script type="text/javascript" src="static/js/chart-control.js"></script>
+    <script type="text/javascript" src="static/js/validation.js"></script>
     <script type="text/javascript" src="static/js/future-chart.js"></script>
 </body>
 </html>
+
